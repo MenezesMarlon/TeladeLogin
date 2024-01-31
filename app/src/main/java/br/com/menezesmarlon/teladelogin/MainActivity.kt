@@ -1,5 +1,6 @@
 package br.com.menezesmarlon.teladelogin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -24,6 +25,8 @@ class MainActivity : AppCompatActivity() {
 
             } else if (user == "admin" && passwd == "admin") {
                 Toast.makeText(this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
 
             } else {
                 Toast.makeText(this, "Login ou senha incorretos", Toast.LENGTH_SHORT).show()
